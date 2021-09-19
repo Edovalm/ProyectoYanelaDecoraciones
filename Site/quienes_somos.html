@@ -5,114 +5,121 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-        <title>¿Quiénes Somos?</title>
-        <meta name="description" content="Página ¿Quiénes Somos? Yanela Decoraciones">
-    </head>    
+        <title>Inicio - Yanela Decoraciones</title>
+        <meta name="description" content="Página de inicio para Yanela Decoraciones">
+    </head>
+
     <body>
-        <header>
+        <header class="main-header--alt">
             <div class="wrapper">
                 <article>
-                    <div>
-                        <a href="contacto.html">Pedir Una Cotización</a>
+                    <div class="hero-info">
+                        <a class="link-button" href="contacto.html">Pedir Una Cotización</a>
                     </div>
                 </article>
             </div>
         </header>
 
-        <nav>
-            <div>
+        <nav class="main-nav">
+            <div class="wrapper main-nav__elements">
                 <div>
                     <a href="index.html"><img src="images/logo.png" alt="Ir a Inicio - Yanela Decoraciones"></a>
                 </div>
-                <spam class="icon-menu"></spam>
-                <ul>
-                    <li><a href="categoria_cortinas.html">Cortinas</a></li>
-                    <li><a href="categoria_persianas.html">Persianas</a></li>
-                    <li><a href="quienes_somos.html">¿Quienes Somos?</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                <spam class="icon-menu main-nav__icon-toggle"></spam>
+                <ul class="main-nav__menu">
+                    <li><a class="main-nav__menu-link" href="categoria_cortinas.html">Cortinas</a></li>
+                    <li><a class="main-nav__menu-link" href="categoria_persianas.html">Persianas</a></li>
+                    <li><a class="main-nav__menu-link" href="quienes_somos.html">¿Quienes Somos?</a></li>
+                    <li><a class="main-nav__menu-link" href="contacto.html">Contacto</a></li>
                 </ul>
-                <spam class="icon-search"></spam>
-                <div>
+                <spam class="icon-search main-nav__icon-toggle"></spam>
+                <div class="main-nav__serch">
                     <form>
-                        <input type="search" placeholder="Buscar...">
-                        <button type="submit" ><span class="icon-search"></span></button>
+                        <input class="main-nav__serch-input" type="search" placeholder="Buscar...">
+                        <button class="main-nav__serch-button" type="submit" ><span class="icon-search main-nav__serch-icon"></span></button>
                     </form>
                 </div>
             </div>
         </nav>
-        
+
         <main>
             <div class="wrapper">
-                <h1>¿Quiénes Somos?</h1>
-                <article>
-                    <h2>Cortinas & Persianas, Yanela Decoraciones</h2>
-                    <img class="card__image"  src="images/Persiana1.jpg" alt="Persiana">
-                    <p>Somos una empresa orgullosamente colombiana fundada en Bogotá, donde te brindamos el servicio de distribución, instalación de cortinas y persianas a la medida.</p>
-                    <p>Nuestros servicios están diseñados para proporcionar la mejor opción  en cuanto al cubrimiento de ventanas, pisos, entre otros servicios decorativos, con la más alta calidad. Estamos siempre a la vanguardia, ya que distribuimos productos de grandes marcas del mercado y por ello contamos con garantías y respaldo.</p>
-                    <p>Gracias a nuestra amplia experiencia y conocimientos en el área de la decoración, podemos orientarle de forma profesional  y brindarle la más completa asesoría, al momento de elegir el producto adecuado a sus necesidades, sin exceder su presupuesto.</p>
-                    <p>Nuestros tiempos de entrega son garantizados. Ofrecemos un amplio portafolio de productos para interiores y exteriores.</p>
-                    <p>Para nosotros "Tu nuevo hogar es un lienso en blanco en donde puedes escribir tu historia"<p>                                                       
-                    <img  class="card__image" src="images/Persiana2.jpg" alt="decoración">
-                </article>
+                <h1 class="card__title">¿Quiénes Somos?</h1>
+                    <div class="grid-wrapper grid-column-2">
+                        <article>
+                            <h2 class="card__subtitle">Cortinas & Persianas, Yanela Decoraciones</h2>
+                            <p class="card__text">Somos una empresa orgullosamente colombiana fundada en Bogotá, donde te brindamos el servicio de distribución, instalación de cortinas y persianas a la medida.</p>
+                            <p class="card__text">Nuestros servicios están diseñados para proporcionar la mejor opción  en cuanto al cubrimiento de ventanas, pisos, entre otros servicios decorativos, con la más alta calidad. Estamos siempre a la vanguardia, ya que distribuimos productos de grandes marcas del mercado y por ello contamos con garantías y respaldo.</p>
+                            <img class="card__image"  src="images/Persiana1.jpg" alt="Persiana">
+                        </article>         
+                         
+                        <article>
+                                <img  class="card__image" src="images/Persiana2.jpg" alt="decoración">
+                                <br>
+                                <br>    
+                                <p class="card__text">Gracias a nuestra amplia experiencia y conocimientos en el área de la decoración, podemos orientarle de forma profesional  y brindarle la más completa asesoría, al momento de elegir el producto adecuado a sus necesidades, sin exceder su presupuesto.</p>
+                                <p class="card__text" >Nuestros tiempos de entrega son garantizados. Ofrecemos un amplio portafolio de productos para interiores y exteriores.</p>
+                                <p class="card__text">Para nosotros "Tu nuevo hogar es un lienso en blanco en donde puedes escribir tu historia"<p>                                                       
+                        </article>
+                    </div>
             </div>
         </main>
-        
+    
         <aside> 
-            <div>
-                <section>
-                    <h2>Nuestros Proveedores</h2>
-                    <div >
-                        <article>
-                            <img src="images/temp_image.png" alt="El Proveedor 1">
+            <div class="wrapper">
+                <section class="card space-usher">
+                    <h2 class="card__title">Nuestros Proveedores</h2>
+                    <div class="grid-wrapper grid-column-mobile-4">
+                        <article class="item-card">
+                            <img class="item-card__image" src="images/temp_image.png" alt="El Proveedor 1">
                         </article>
-                        <article>
-                            <img src="images/temp_image.png" alt="El Proveedor 2">
+                        <article class="item-card">
+                            <img class="item-card__image" src="images/temp_image.png" alt="El Proveedor 2">
                         </article>
-                        <article>
-                            <img src="images/temp_image.png" alt="El Proveedor 3">
+                        <article class="item-card">
+                            <img class="item-card__image" src="images/temp_image.png" alt="El Proveedor 3">
                         </article>
-                        <article>
-                            <img src="images/temp_image.png" alt="El Proveedor 4">
+                        <article class="item-card">
+                            <img class="item-card__image" src="images/temp_image.png" alt="El Proveedor 4">
                         </article>
                     </div>
                 </section>
             </div>
         </aside>
 
-        <footer>
-            <div>
-                <section>
-                    <h2>Síguenos</h2>
-                    <ul>
-                        <li><a href="#"><span class="icon-facebook"></span></a></li>
-                        <li><a href="#"><span class="icon-instagram"></span></a></li>
-                        <li><a href="#"><span class="icon-pinterest"></span></a></li>
-                        <li><a href="#"><span class="icon-youtube"></span></a></li>
-                        <li><a href="#"><span class="icon-linkedin"></span></a></li>
+        <footer class="main-footer">
+            <div class="wrapper grid-wrapper grid-column-3">
+                <section class="main-footer__card space-usher">
+                    <h2 class="main-footer__card-title">Síguenos</h2>
+                    <ul class="main-footer__card-social-wrapper">
+                        <li class="main-footer__card-item"><a href="#"><span class="main-footer__card-social icon-facebook"></span></a></li>
+                        <li class="main-footer__card-item"><a href="#"><span class="main-footer__card-social icon-instagram"></span></a></li>
+                        <li class="main-footer__card-item"><a href="#"><span class="main-footer__card-social icon-pinterest"></span></a></li>
+                        <li class="main-footer__card-item"><a href="#"><span class="main-footer__card-social icon-youtube"></span></a></li>
+                        <li class="main-footer__card-item"><a href="#"><span class="main-footer__card-social icon-linkedin"></span></a></li>
                     </ul>
                     <img src="images/logo-footer.png" alt="Logo Yanela Decoraciones">
                 </section>
-                <section>
-                    <h2>Información</h2>
-                    <p><span class="icon-mobile"></span> 316 999 9999</p>  
-                    <p><span class="icon-email"></span> hola@yaneladecoraciones.com</p>  
-                    <p><span class="icon-clock"></span> Infomación de Horario</p>  
-                    <p><span class="icon-marker"></span> Carrera ## Nº ## - ## Bogotá - Colombia</p> 
+                <section class="main-footer__card space-usher">
+                    <h2 class="main-footer__card-title">Información</h2>
+                    <p class="main-footer__card-item"><span class="main-footer__icon icon-mobile"></span> 316 999 9999</p>  
+                    <p class="main-footer__card-item"><span class="main-footer__icon icon-email"></span> hola@yaneladecoraciones.com</p>  
+                    <p class="main-footer__card-item"><span class="main-footer__icon icon-clock"></span> Infomación de Horario</p>  
+                    <p class="main-footer__card-item"><span class="main-footer__icon icon-marker"></span> Carrera ## Nº ## - ## Bogotá - Colombia</p> 
                 </section>
-                <section>
-                    <h2 >Legalidad</h2>
+                <section class="main-footer__card space-usher">
+                    <h2  class="main-footer__card-title">Legalidad</h2>
                     <ul>
-                        <li><a href="terminos_uso.html">Términos de Uso</a></li>
-                        <li><a href="politica_privacidad.html">Política de Privacidad</a></li>
-                        <li><a href="mapa_sitio.html">Mapa del Sitio</a></li>
+                        <li class="main-footer__card-item"><a class="main-footer__link" href="terminos_uso.html">Términos de Uso</a></li>
+                        <li class="main-footer__card-item"><a class="main-footer__link" href="politica_privacidad.html">Política de Privacidad</a></li>
+                        <li class="main-footer__card-item"><a class="main-footer__link" href="mapa_sitio.html">Mapa del Sitio</a></li>
                     </ul>
                 </section>
             </div>
-            <div">
-                <p><span class="icon-copyright"></span>Copyright - 2021</p>
+            <div class="wrapper main-footer__copyright">
+                <p><span class="icon-copyright main-footer__copyright-icon"></span>Copyright - 2021</p>
             </div>
         </footer> 
         <span>Aquí Icono Acceso a Chatbox de WhatsApp</span> 
     </body>
 </html>
-
