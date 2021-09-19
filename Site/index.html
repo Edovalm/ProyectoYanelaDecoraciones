@@ -10,150 +10,147 @@
     </head>
 
     <body>
-        <header>
+        <header class="main-header">
             <div class="wrapper">
                 <article>
-                    <div>
-                        <img src="images/hogar-persiana-large.jpg" alt="Sala Hogar con Persiana">
-                    </div>
-    
-                    <div>
-                        <p>Aquí Frase de Eslogan o Bienvenida </p>
-                    </div>
-
-                    <div>
-                        <p>Boton - Pedir Una Cotización</p>
+                    <div class="hero-info">
+                        <p class="hero-info__welcome">Con Yanela Decoraciones, encontrarás el toque de estilo y clase para ti</p>
+                        <a class="link-button" href="contacto.html">Pedir Una Cotización</a>
                     </div>
                 </article>
             </div>
         </header>
 
-        <nav>
-            <div class="wrapper">
+        <nav class="main-nav">
+            <div class="wrapper main-nav__elements">
                 <div>
                     <a href="index.html"><img src="images/logo.png" alt="Ir a Inicio - Yanela Decoraciones"></a>
                 </div>
-
-                <ul>
-                    <li><a href="categoria_cortinas.html">Cortinas</a></li>
-                    <li><a href="categoria_persianas.html">Persianas</a></li>
-                    <li><a href="quienes_somos.html">¿Quienes Somos?</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                <spam class="icon-menu main-nav__icon-toggle"></spam>
+                <ul class="main-nav__menu">
+                    <li><a class="main-nav__menu-link" href="categoria_cortinas.html">Cortinas</a></li>
+                    <li><a class="main-nav__menu-link" href="categoria_persianas.html">Persianas</a></li>
+                    <li><a class="main-nav__menu-link" href="quienes_somos.html">¿Quienes Somos?</a></li>
+                    <li><a class="main-nav__menu-link" href="contacto.html">Contacto</a></li>
                 </ul>
-
-                <div>
+                <spam class="icon-search main-nav__icon-toggle"></spam>
+                <div class="main-nav__serch">
                     <form>
-                        <input type="search" placeholder="Buscar...">
-                        <button type="submit" ><span>Aquí Icono Búsqueda</span></button>
+                        <input class="main-nav__serch-input" type="search" placeholder="Buscar...">
+                        <button class="main-nav__serch-button" type="submit" ><span class="icon-search main-nav__serch-icon"></span></button>
                     </form>
                 </div>
             </div>
         </nav>
 
         <main>
-            <div class="wrapper">
-                <h1>Productos Para Ti en Yanela Decoraciones</h1>
-
-                <article>
-                    <a href="categoria_cortinas.html">
-                        <h2>Cortinas</h2>
-                        <img src="images/temp_image.png" alt="Productos Cortinas">
-                        <p>Nuestras cortinas son fabricadas con materiales de alta calidad, son completamente adaptables a la medida de cada espacio. Encuentra diferentes modelos de cortinas para sala, habitaciones y demás espacios del hogar, podrás brindar un estilo decorativo único y moderno a tu ambiente. Trabajamos y nos asociamos con las mejores marcas del mercado al igual que contamos con un amplio portafolio de automatización.</p>
-
-                        <span>Ver Más</span>
-                    </a>
-                </article>
-
-                <article>
-                    <a href="categoria_persianas.html">
-                        <h2>Persianas</h2>
-                        <img src="images/temp_image.png" alt="Productos Persianas">
-                        <p>Nuestras persianas de accionamiento manual y persianas automatizadas que cuentan con los estándares más altos de calidad para ofrecerte los mejores productos del mercado, elige con nosotros la persiana que mejor complemente la decoración de tu casa, oficina o negocio.</p>
-                        
-                        <span>Ver Más</span>
-                    </a>
-                </article>
+            <div class="wrapper card space-usher">
+                <h1 class="card__title">Productos Para Ti en Yanela Decoraciones</h1>
+                <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repellat atque officia, quis molestias vel dolore deleniti unde expedita sit cupiditate odit illum saepe libero esse, cum ipsa eum rerum?</p>
+                <h2 class="card__subtitle">Un Subtítulo</h2>
+                <p class="card__text">Este es un ejemplo de guia para saber que clases usar en las páginas que hay textos con subtítulos.</p>
+                <div class="grid-wrapper grid-column-2">
+                    <article class="item-card">
+                        <a class="item-card__link" href="categoria_cortinas.html">
+                            <h2 class="item-card__title">Cortinas</h2>
+                            <img class="item-card__image" src="images/img-categoria-cortinas.jpg" alt="Productos Cortinas">
+                            <div class="item-card__details">
+                                <span class="icon-search"></span>
+                            </div>
+                            <p class="item-card__info">Nuestras cortinas son fabricadas con materiales de alta calidad, son completamente adaptables a la medida de cada espacio. <span class="item-card__button">Ver Mas...</span></p>
+                        </a>
+                    </article>
+    
+                    <article class="item-card">
+                        <a class="item-card__link" href="categoria_persianas.html">
+                            <h2 class="item-card__title">Persianas</h2>
+                            <img class="item-card__image" src="images/img-categoria-persianas.jpg" alt="Productos Persianas">
+                            <div class="item-card__details">
+                                <span class="icon-search"></span>
+                            </div>
+                            <p class="item-card__info">Nuestras persianas de accionamiento manual y persianas automatizadas que cuentan con los estándares más altos de calidad. <span class="item-card__button">Ver Mas...</span></p>
+                        </a>
+                    </article>
+                </div>
             </div>
         </main>
 
-        <aside>
+        <aside> 
             <div class="wrapper">
-                <section>
-                    <h2>Ventajas de Elegirnos</h2>
-    
-                    <article>
-                        <h3>Ventaja 1</h3>
-                        <img src="images/temp_image.png" alt="La Ventaja 1">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, voluptas</p>
-                    </article>
-                    
-                    <article>
-                        <h3>Ventaja 2</h3>
-                        <img src="images/temp_image.png" alt="La Ventaja 2">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, voluptas</p>
-                    </article>
-    
-                    <article>
-                        <h3>Ventaja 3</h3>
-                        <img src="images/temp_image.png" alt="La Ventaja 3">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, voluptas</p>
-                    </article>
+                <section class="card space-usher">
+                    <h2 class="card__title">Ventajas de Elegirnos</h2>
+                    <div class="grid-wrapper grid-column-3">
+                        <article class="item-card">
+                            <h3 class="item-card__title">Ventaja 1</h3>
+                            <img class="item-card__image" src="images/temp_image.png" alt="La Ventaja 1">
+                            <p class="item-card__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, voluptas</p>
+                        </article>
+                        
+                        <article class="item-card">
+                            <h3 class="item-card__title">Ventaja 2</h3>
+                            <img class="item-card__image" src="images/temp_image.png" alt="La Ventaja 2">
+                            <p class="item-card__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, voluptas</p>
+                        </article>
+        
+                        <article class="item-card">
+                            <h3 class="item-card__title">Ventaja 3</h3>
+                            <img class="item-card__image" src="images/temp_image.png" alt="La Ventaja 3">
+                            <p class="item-card__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, voluptas</p>
+                        </article>
+                    </div>
                 </section>
     
-                <section>
-                    <h2>Nuestros Proveedores</h2>
-    
-                    <article>
-                        <h3>Proveedor 1</h3>
-                        <img src="images/temp_image.png" alt="El Proveedor 1">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, voluptas</p>
-                    </article>
-                    
-                    <article>
-                        <h3>Proveedor 2</h3>
-                        <img src="images/temp_image.png" alt="El Proveedor 2">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, voluptas</p>
-                    </article>
-    
-                    <article>
-                        <h3>Proveedor 3</h3>
-                        <img src="images/temp_image.png" alt="El Proveedor 3">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, voluptas</p>
-                    </article>
+                <section class="card space-usher">
+                    <h2 class="card__title">Nuestros Proveedores</h2>
+                    <div class="grid-wrapper grid-column-mobile-4">
+                        <article class="item-card">
+                            <img class="item-card__image" src="images/temp_image.png" alt="El Proveedor 1">
+                        </article>
+                        <article class="item-card">
+                            <img class="item-card__image" src="images/temp_image.png" alt="El Proveedor 2">
+                        </article>
+                        <article class="item-card">
+                            <img class="item-card__image" src="images/temp_image.png" alt="El Proveedor 3">
+                        </article>
+                        <article class="item-card">
+                            <img class="item-card__image" src="images/temp_image.png" alt="El Proveedor 4">
+                        </article>
+                    </div>
                 </section>
             </div>
         </aside>
-        <footer>
-            <div class="wrapper">
-                <section>
-                    <h2>Sigue a Yanela Decoraciones</h2>
+
+        <footer class="main-footer">
+            <div class="wrapper grid-wrapper grid-column-3">
+                <section class="main-footer__card space-usher">
+                    <h2 class="main-footer__card-title">Síguenos</h2>
+                    <ul class="main-footer__card-social-wrapper">
+                        <li class="main-footer__card-item"><a href="#"><span class="main-footer__card-social icon-facebook"></span></a></li>
+                        <li class="main-footer__card-item"><a href="#"><span class="main-footer__card-social icon-instagram"></span></a></li>
+                        <li class="main-footer__card-item"><a href="#"><span class="main-footer__card-social icon-pinterest"></span></a></li>
+                        <li class="main-footer__card-item"><a href="#"><span class="main-footer__card-social icon-youtube"></span></a></li>
+                        <li class="main-footer__card-item"><a href="#"><span class="main-footer__card-social icon-linkedin"></span></a></li>
+                    </ul>
+                    <img src="images/logo-footer.png" alt="Logo Yanela Decoraciones">
+                </section>
+                <section class="main-footer__card space-usher">
+                    <h2 class="main-footer__card-title">Información</h2>
+                    <p class="main-footer__card-item"><span class="main-footer__icon icon-mobile"></span> 316 999 9999</p>  
+                    <p class="main-footer__card-item"><span class="main-footer__icon icon-email"></span> hola@yaneladecoraciones.com</p>  
+                    <p class="main-footer__card-item"><span class="main-footer__icon icon-clock"></span> Infomación de Horario</p>  
+                    <p class="main-footer__card-item"><span class="main-footer__icon icon-marker"></span> Carrera ## Nº ## - ## Bogotá - Colombia</p> 
+                </section>
+                <section class="main-footer__card space-usher">
+                    <h2  class="main-footer__card-title">Legalidad</h2>
                     <ul>
-                        <li><a href="#">Aquí Icono Facebook</a></li>
-                        <li><a href="#">Aquí Icono Instagram</a></li>
-                        <li><a href="#">Aquí Icono Pinterest</a></li>
-                        <li><a href="#">Aquí Icono Youtube</a></li>
-                        <li><a href="#">Aquí Icono LinkedIn</a></li>
+                        <li class="main-footer__card-item"><a class="main-footer__link" href="terminos_uso.html">Términos de Uso</a></li>
+                        <li class="main-footer__card-item"><a class="main-footer__link" href="politica_privacidad.html">Política de Privacidad</a></li>
+                        <li class="main-footer__card-item"><a class="main-footer__link" href="mapa_sitio.html">Mapa del Sitio</a></li>
                     </ul>
                 </section>
-                <section>
-                    <h2>Información Yanela Decoraciones</h2>
-                    <img src="images/logo.png" alt="Logo Yanela Decoraciones">
-                    <p><span>Aquí Icono Móvil</span> 316 999 9999</p>  
-                    <p> <span>Aquí Icono Correo</span> hola@yaneladecoraciones.com</p>  
-                    <p><span>Aquí Icono Horario</span> Infomación de Horario</p>  
-                    <p><span>Aquí Icono Ubicación</span> Carrera ## Nº ## - ## Bogotá - Colombia</p> 
-                </section>
-                <section>
-                    <h2>Legalidad</h2>
-                    <ul>
-                        <li><a href="terminos_uso.html">Términos de Uso</a></li>
-                        <li><a href="politica_privacidad.html">Política de Privacidad</a></li>
-                        <li><a href="mapa_sitio.html">Mapa del Sitio</a></li>
-                    </ul>
-                </section>
-                <div>
-                    <p>Copyright</p>
-                </div>
+            </div>
+            <div class="wrapper main-footer__copyright">
+                <p><span class="icon-copyright main-footer__copyright-icon"></span>Copyright - 2021</p>
             </div>
         </footer> 
         <span>Aquí Icono Acceso a Chatbox de WhatsApp</span> 

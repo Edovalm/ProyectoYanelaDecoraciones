@@ -1,0 +1,440 @@
+
+/*### GOOGLE-FONTS ###*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+@import "icons-set.css";
+
+/*### RESET ###*/
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+
+/*### VARIABLES CSS ###*/
+:root {
+    --color-principal: #224277;
+    --color-principal-eg: #4c4c4c; /* eg -> escala de grises*/
+    --color-principal-tr:rgba(34, 66, 119, 0.5);/* tr -> con transparencia*/
+    --color-principal-trmin:rgba(34, 66, 119, 0.95);/* trmin -> con transparencia mínima*/
+    --extra-color1: #fff; 
+    --extra-color1-tr:rgba(255, 255, 255, 0.4);/* tr -> con transparencia*/
+}
+
+/*### ESTILOS BASE ###*/
+html {
+    font-size: 16px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+} 
+
+h1, h2, h3 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+h1 {
+    font-size: 1.25em;
+}
+
+h2, h3 {
+    font-size: 1.2em;
+}
+
+p, a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto; 
+}
+
+/*### LAYOUT ###*/
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1024px; /*IPAD PRO 12.29*/
+}
+
+.grid-wrapper{
+    display: grid;
+    gap: 2em;
+}
+
+.grid-column-mobile-4{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/*### CLASES ETIQUETAS SEMANTICAS ###*/
+/*Main Header*/
+.main-header {
+    background: url(../images/hogar-persiana-large.jpg) center center / cover fixed;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Main Nav*/
+.main-nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: var(--extra-color1);
+    z-index: 1000;
+    border-bottom: 1px solid var(--color-principal);
+}
+
+.main-nav__elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .25em 0;
+}
+
+/*##############################*/
+/*NOTA PARA EL PROFESOR FABIAN, 
+Estilos temporales para luego
+gestionar con JavaScript, si se
+comentan, uno por uno se podran
+ver los estilos de ventanas modales
+para la botonera de navegación y el
+formulario de búsqueda:*/
+.main-nav__menu{              
+    display: none;
+}
+
+.main-nav__serch {
+    display: none;
+}
+/*##############################*/
+
+.main-nav__menu, .main-nav__serch {
+    background: var(--color-principal-trmin);
+    padding: 3em 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.main-nav__serch-input {
+    border: 1px solid var(--extra-color1);
+    color: var(--extra-color1);
+    font-style: italic;
+    padding: .5em;
+    width: 50vw;
+}
+
+.main-nav__serch-button {
+    display: none;
+}
+
+.main-nav__menu-link {
+    font-family: 'Libre Baskerville', serif;
+    color: var(--extra-color1);
+    display: block;
+    line-height: 2;
+    padding: .5em;
+}
+
+.main-nav__icon-toggle {
+    margin-left: .5em;
+    color: var(--color-principal);
+    font-size: 1.5em;
+    line-height: 0px;
+    padding: .2em;
+    border: 2px solid var(--color-principal);
+    border-radius: 50%;
+}
+
+/* Main Footer */
+.main-footer {
+    background: url(../images/hogar-persiana-footer.jpg) center center / cover fixed;
+}
+
+.main-footer__card {
+    padding: 1em 0;
+    border-top: 1px solid var(--extra-color1);
+    border-bottom: 1px solid var(--extra-color1);
+}
+.main-footer, .main-footer__link {
+    color: var(--extra-color1);
+}
+
+.main-footer__card-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    margin-bottom: 1em;
+    font-size: 1em;
+}
+
+.main-footer__card-item {
+    margin-bottom: .5em;
+    font-size: .8em;
+}
+
+.main-footer__icon {
+    font-size: 1em;;
+    margin-right: .5em;
+}
+.main-footer__card-social-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .25em;
+    margin-bottom: 1em;
+}
+
+.main-footer__card-social {
+    color: var(--extra-color1);
+    border: 1px solid var(--extra-color1);
+    padding: .5em;
+}
+
+.main-footer__copyright {
+    text-align: center;
+    padding: .5em 0;
+    font-size: .9em;
+}
+
+.main-footer__copyright-icon {
+    padding-right: .5em;
+}
+
+/*### CLASES OTROS ELEMENTOS ###*/
+/* Hero Info */
+.hero-info {
+    text-align: center;
+    padding: 2em;
+    background-color: var(--extra-color1-tr);
+}
+
+.hero-info__welcome {
+    font-family: 'Libre Baskerville', serif;
+    margin-bottom: 1em;
+    color:var(--color-principal);
+    font-size: 1.5em;
+}
+
+/* Card */
+.card__subtitle {
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    color: var(--color-principal-eg);
+    font-size: 1.4em;
+    margin-bottom: 1em;
+}
+
+.card__image {
+    display: block;
+    border: 1px solid var(--color-principal);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;  
+}
+
+.card__text {
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+.card__text, .item-card__info {
+    color: var(--color-principal-eg);
+}
+.card, .item-card {
+    padding: .5em 0;
+}
+
+.card__title, .item-card__title {
+    color: var(--color-principal);
+    text-align: center;
+    margin-bottom: 1em;;
+}
+
+.item-card {
+    overflow: hidden;
+    position: relative; 
+    text-align: center; /*para cuando no tenga un ancla*/
+}
+
+.item-card__link {
+    display: block;
+    text-align: center;
+}
+
+.item-card__image {
+    border: 1px solid var(--color-principal);
+    margin-bottom: 1rem;  
+}
+
+.item-card__details {
+    display: none;
+}
+
+.item-card__info span{
+    color: var(--color-principal);
+    font-weight: bold;
+}
+
+/* Link Button */
+.link-button {
+    color:var(--extra-color1);
+    border-radius: .5em;
+    display: inline-block;
+    padding: .75em;
+    background-color: var(--color-principal);
+}
+.link-button:hover {
+    background-color: var(--color-principal-eg);
+}
+
+/* Space Usher */
+.space-usher {
+    padding: 1em .5em;
+
+}
+
+/**************************************************************************************************/
+/********************************MEDIA QUERY - IPAD PRO 12.29 *************************************/
+/**************************************************************************************************/
+
+@media all and (min-width: 1024px) { 
+    /*### ESTILOS BASE ###*/
+    h1 {
+        font-size: 2.25em;
+    }
+
+    h2, h3 {
+        font-size: 2.2em;
+    }
+
+    /*### LAYOUT ###*/
+    .grid-column-2{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .grid-column-3{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /*### CLASES ETIQUETAS SEMANTICAS ###*/
+    /*Main Header*/
+    .main-header {
+        height: 90vh;
+    }
+    
+    /*Main Nav*/
+    .main-nav__menu {
+        display: flex;
+        background: none;
+        position: static;
+        padding: 0;
+        width: auto;
+        height: auto;
+    }
+
+    .main-nav__menu-link {
+        color: var(--color-principal);
+        padding: .5em 1em;
+    }
+
+    .main-nav__menu-link:hover {
+        font-weight: bold;
+        transition: 0.5s;
+    }
+
+    .main-nav__icon-toggle {
+        display: none;
+    }
+
+    .main-nav__serch {
+        display: inline;
+        background: none;
+        position: static;
+        padding: 0;
+        width: auto;
+        height: auto;
+    }
+
+    .main-nav__serch-button {
+        border: none;
+        display: inline;
+    }
+    .main-nav__serch-input {
+        border: 1px solid var(--color-principal);
+        color: var(--color-principal);
+        width: 200px;
+    }
+
+    .main-nav__serch-icon {
+        color: var(--color-principal);
+        font-size: 1.5em;
+        line-height: 1.5;
+        padding: 0 .2em;
+    }
+
+    /* Main Footer */
+    .main-footer {
+        padding: 3em;
+    }
+
+    .main-footer__link:hover {
+        font-weight: bold;
+    }
+
+    .main-footer__card-social:hover {
+        font-size: 1.2em;
+    }
+
+    /*### CLASES OTROS ELEMENTOS ###*/
+    /* Hero Info */
+    .hero-info {
+        padding: 2.5em;
+    }
+
+    .hero-info__welcome {
+        font-size: 2.5em;
+    }
+
+    /* Card */
+    .card__text {
+        margin-bottom: 2em;
+    }
+
+    .item-card__details {
+        background: var(--color-principal-tr);
+        border: 1px solid var(--color-principal);
+        height: 100%;
+        top: -100%;
+        position: absolute;
+        text-align: center;
+        transition: all 0.4s;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item-card__details span {
+        color: var(--extra-color1);
+        font-size: 3em; 
+    }
+
+    .item-card:hover .item-card__details {
+        top: 0; 
+    }
+
+    .card, .item-card {
+        padding: 1em 0;
+    }
+}
