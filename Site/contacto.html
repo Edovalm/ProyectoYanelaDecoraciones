@@ -9,41 +9,41 @@
         <meta name="description" content="Página de contacto para Yanela Decoraciones">
     </head>
     <body>
-        <header>
+        <header class="main-header">
             <div class="wrapper">
                 <article>
-                    <div>
-                        <a href="contacto.html">Pedir Una Cotización</a>
+                    <div class="hero-info">
+                        <p class="hero-info__welcome">Realiza tu Cotización</p>
                     </div>
                 </article>
             </div>
         </header>
 
-        <nav>
-            <div>
+        <nav class="main-nav">
+            <div class="wrapper main-nav__elements">
                 <div>
                     <a href="index.html"><img src="images/logo.png" alt="Ir a Inicio - Yanela Decoraciones"></a>
                 </div>
-                <spam class="icon-menu"></spam>
-                <ul>
-                    <li><a href="categoria_cortinas.html">Cortinas</a></li>
-                    <li><a href="categoria_persianas.html">Persianas</a></li>
-                    <li><a href="quienes_somos.html">¿Quienes Somos?</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                <spam class="icon-menu main-nav__icon-toggle"></spam>
+                <ul class="main-nav__menu">
+                    <li><a class="main-nav__menu-link" href="categoria_cortinas.html">Cortinas</a></li>
+                    <li><a class="main-nav__menu-link" href="categoria_persianas.html">Persianas</a></li>
+                    <li><a class="main-nav__menu-link" href="quienes_somos.html">¿Quienes Somos?</a></li>
+                    <li><a class="main-nav__menu-link" href="contacto.html">Contacto</a></li>
                 </ul>
-                <spam class="icon-search"></spam>
-                <div>
+                <spam class="icon-search main-nav__icon-toggle"></spam>
+                <div class="main-nav__serch">
                     <form>
-                        <input type="search" placeholder="Buscar...">
-                        <button type="submit" ><span class="icon-search"></span></button>
+                        <input class="main-nav__serch-input" type="search" placeholder="Buscar...">
+                        <button class="main-nav__serch-button" type="submit" ><span class="icon-search main-nav__serch-icon"></span></button>
                     </form>
                 </div>
             </div>
         </nav>
-        
+
         <main>
-            <div class="wrapper">
-                <h1>Contáctanos</h1>
+            <div class="wrapper card space-usher">
+                <h1 class="card__title">Contáctanos</h1>
                 <section>
                     <form action="" name="contact-form">
                         <input type="text" placeholder="Tu Nombre:" required>
@@ -59,58 +59,58 @@
         </main>
 
         <aside> 
-            <div>
-                <section>
-                    <h2>Nuestros Proveedores</h2>
-                    <div >
-                        <article>
-                            <img src="images/temp_image.png" alt="El Proveedor 1">
+            <div class="wrapper">
+                <section class="card space-usher">
+                    <h2 class="card__title">Nuestros Proveedores</h2>
+                    <div class="grid-wrapper grid-column-mobile-4">
+                        <article class="item-card">
+                            <img class="item-card__image" src="images/temp_image.png" alt="El Proveedor 1">
                         </article>
-                        <article>
-                            <img src="images/temp_image.png" alt="El Proveedor 2">
+                        <article class="item-card">
+                            <img class="item-card__image" src="images/temp_image.png" alt="El Proveedor 2">
                         </article>
-                        <article>
-                            <img src="images/temp_image.png" alt="El Proveedor 3">
+                        <article class="item-card">
+                            <img class="item-card__image" src="images/temp_image.png" alt="El Proveedor 3">
                         </article>
-                        <article>
-                            <img src="images/temp_image.png" alt="El Proveedor 4">
+                        <article class="item-card">
+                            <img class="item-card__image" src="images/temp_image.png" alt="El Proveedor 4">
                         </article>
                     </div>
                 </section>
             </div>
         </aside>
 
-        <footer>
-            <div>
-                <section>
-                    <h2>Síguenos</h2>
-                    <ul>
-                        <li><a href="#"><span class="icon-facebook"></span></a></li>
-                        <li><a href="#"><span class="icon-instagram"></span></a></li>
-                        <li><a href="#"><span class="icon-pinterest"></span></a></li>
-                        <li><a href="#"><span class="icon-youtube"></span></a></li>
-                        <li><a href="#"><span class="icon-linkedin"></span></a></li>
+        <footer class="main-footer">
+            <div class="wrapper grid-wrapper grid-column-3">
+                <section class="main-footer__card space-usher">
+                    <h2 class="main-footer__card-title">Síguenos</h2>
+                    <ul class="main-footer__card-social-wrapper">
+                        <li class="main-footer__card-item"><a href="#"><span class="main-footer__card-social icon-facebook"></span></a></li>
+                        <li class="main-footer__card-item"><a href="#"><span class="main-footer__card-social icon-instagram"></span></a></li>
+                        <li class="main-footer__card-item"><a href="#"><span class="main-footer__card-social icon-pinterest"></span></a></li>
+                        <li class="main-footer__card-item"><a href="#"><span class="main-footer__card-social icon-youtube"></span></a></li>
+                        <li class="main-footer__card-item"><a href="#"><span class="main-footer__card-social icon-linkedin"></span></a></li>
                     </ul>
                     <img src="images/logo-footer.png" alt="Logo Yanela Decoraciones">
                 </section>
-                <section>
-                    <h2>Información</h2>
-                    <p><span class="icon-mobile"></span> 316 999 9999</p>  
-                    <p><span class="icon-email"></span> hola@yaneladecoraciones.com</p>  
-                    <p><span class="icon-clock"></span> Infomación de Horario</p>  
-                    <p><span class="icon-marker"></span> Carrera ## Nº ## - ## Bogotá - Colombia</p> 
+                <section class="main-footer__card space-usher">
+                    <h2 class="main-footer__card-title">Información</h2>
+                    <p class="main-footer__card-item"><span class="main-footer__icon icon-mobile"></span> 316 999 9999</p>  
+                    <p class="main-footer__card-item"><span class="main-footer__icon icon-email"></span> hola@yaneladecoraciones.com</p>  
+                    <p class="main-footer__card-item"><span class="main-footer__icon icon-clock"></span> Infomación de Horario</p>  
+                    <p class="main-footer__card-item"><span class="main-footer__icon icon-marker"></span> Carrera ## Nº ## - ## Bogotá - Colombia</p> 
                 </section>
-                <section>
-                    <h2 >Legalidad</h2>
+                <section class="main-footer__card space-usher">
+                    <h2  class="main-footer__card-title">Legalidad</h2>
                     <ul>
-                        <li><a href="terminos_uso.html">Términos de Uso</a></li>
-                        <li><a href="politica_privacidad.html">Política de Privacidad</a></li>
-                        <li><a href="mapa_sitio.html">Mapa del Sitio</a></li>
+                        <li class="main-footer__card-item"><a class="main-footer__link" href="terminos_uso.html">Términos de Uso</a></li>
+                        <li class="main-footer__card-item"><a class="main-footer__link" href="politica_privacidad.html">Política de Privacidad</a></li>
+                        <li class="main-footer__card-item"><a class="main-footer__link" href="mapa_sitio.html">Mapa del Sitio</a></li>
                     </ul>
                 </section>
             </div>
-            <div">
-                <p><span class="icon-copyright"></span>Copyright - 2021</p>
+            <div class="wrapper main-footer__copyright">
+                <p><span class="icon-copyright main-footer__copyright-icon"></span>Copyright - 2021</p>
             </div>
         </footer> 
         <span>Aquí Icono Acceso a Chatbox de WhatsApp</span> 
