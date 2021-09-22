@@ -14,6 +14,7 @@
 :root {
     --color-principal: #224277;
     --color-principal-eg: #4c4c4c; /* eg -> escala de grises*/
+    --color-principal-egtr: rgba(76, 76, 76, 0.17); /* egtr -> escala de grises con trasnparencia*/
     --color-principal-tr:rgba(34, 66, 119, 0.5);/* tr -> con transparencia*/
     --color-principal-trmin:rgba(34, 66, 119, 0.95);/* trmin -> con transparencia mínima*/
     --extra-color1: #fff; 
@@ -42,7 +43,7 @@ h1 {
 }
 
 h2, h3 {
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 p, a {
@@ -68,18 +69,26 @@ img {
     gap: 2em;
 }
 
-.grid-column-mobile-4{
+.grid-column-mobile-4 {
     grid-template-columns: repeat(4, 1fr);
 }
 
 /*### CLASES ETIQUETAS SEMANTICAS ###*/
 /*Main Header*/
-.main-header {
+.main-header, .main-header--alt {
     background: url(../images/hogar-persiana-large.jpg) center center / cover fixed;
-    height: 70vh;
+    padding-top: 52px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.main-header {
+    height: 70vh;
+}
+
+.main-header--alt {
+    height: auto;
 }
 
 /*Main Nav*/
@@ -100,14 +109,19 @@ img {
     padding: .25em 0;
 }
 
-/*##############################*/
-/*NOTA PARA EL PROFESOR FABIAN, 
+.main-nav__elements > .icon-menu {
+    order: 1;
+}
+
+/*##############################
+NOTA PARA EL PROFESOR FABIAN, 
 Estilos temporales para luego
 gestionar con JavaScript, si se
 comentan, uno por uno se podran
-ver los estilos de ventanas modales
-para la botonera de navegación y el
-formulario de búsqueda:*/
+ver los estilos en tamaño mobile
+de ventanas modalespara la botonera 
+de navegación y el formulario de 
+búsqueda:*/
 .main-nav__menu{              
     display: none;
 }
@@ -140,12 +154,17 @@ formulario de búsqueda:*/
     display: none;
 }
 
-.main-nav__menu-link {
+.main-nav__menu-link, .main-nav__menu-link--active {
     font-family: 'Libre Baskerville', serif;
     color: var(--extra-color1);
     display: block;
     line-height: 2;
     padding: .5em;
+}
+
+.main-nav__menu-link--active {
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .main-nav__icon-toggle {
@@ -158,6 +177,29 @@ formulario de búsqueda:*/
     border-radius: 50%;
 }
 
+/* Aside: Our Providers */
+.our-providers {
+    background: var(--color-principal);
+    color: var(--extra-color1);
+    padding: 1em 0;
+    border-top: 1.5em solid var(--color-principal-egtr);
+    border-bottom: 1.5em solid var(--color-principal-egtr);
+}
+
+.our-providers__logos {
+    padding: 1.5em 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    justify-items: center;
+}
+
+.our-providers .card__title, 
+.our-providers .card__text {
+    color: var(--extra-color1);
+    text-align: center;
+}
+
 /* Main Footer */
 .main-footer {
     background: url(../images/hogar-persiana-footer.jpg) center center / cover fixed;
@@ -168,8 +210,14 @@ formulario de búsqueda:*/
     border-top: 1px solid var(--extra-color1);
     border-bottom: 1px solid var(--extra-color1);
 }
-.main-footer, .main-footer__link {
+
+.main-footer, .main-footer__link, .main-footer__link--active {
     color: var(--extra-color1);
+}
+
+.main-footer__link--active {
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .main-footer__card-title {
@@ -188,12 +236,14 @@ formulario de búsqueda:*/
     font-size: 1em;;
     margin-right: .5em;
 }
+
 .main-footer__card-social-wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: .25em;
     margin-bottom: 1em;
+    max-width: 260px;
 }
 
 .main-footer__card-social {
@@ -236,6 +286,11 @@ formulario de búsqueda:*/
     margin-bottom: 1em;
 }
 
+.card__text {
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+
 .card__image {
     display: block;
     border: 1px solid var(--color-principal);
@@ -244,14 +299,40 @@ formulario de búsqueda:*/
     margin-bottom: 1rem;  
 }
 
-.card__text {
-    margin-bottom: 1em;
-    font-size: 1.2em;
+.card__sitemap {
+    border: 1px solid var(--color-principal-egtr);
+    padding: 1em .5em;
 }
+
+.card__sitemap .card__link-sitemap1, 
+.card__sitemap .card__link-sitemap2 {
+    color: var(--color-principal-eg);
+    font-size: 1.2em;
+    line-height: 0;
+    padding: .5em 0;
+    display: block;
+    width: max-content;
+}
+
+.card__link-sitemap1{
+    font-weight: bold;
+}
+
+.card__sitemap a span {
+    margin-right: 1em;
+    font-size: 1.4em;
+}
+
+.card__sitemap .icon-file {
+    margin-left: 1em;
+}
+
 .card__text, .item-card__info {
     color: var(--color-principal-eg);
 }
-.card, .item-card {
+
+/* Item Card */
+.item-card {
     padding: .5em 0;
 }
 
@@ -264,7 +345,8 @@ formulario de búsqueda:*/
 .item-card {
     overflow: hidden;
     position: relative; 
-    text-align: center; /*para cuando no tenga un ancla*/
+    text-align: center; /* para cuando no tenga un ancla */
+    border: 1px solid var(--color-principal-egtr);
 }
 
 .item-card__link {
@@ -272,18 +354,43 @@ formulario de búsqueda:*/
     text-align: center;
 }
 
+.item-card__image, .item-card__info, .item-card__form { 
+    padding: 0 .5em;
+}
+
 .item-card__image {
-    border: 1px solid var(--color-principal);
     margin-bottom: 1rem;  
+}
+
+.item-card__info span{
+    color: var(--color-principal);
+    font-weight: bold;
 }
 
 .item-card__details {
     display: none;
 }
 
-.item-card__info span{
+.item-card__form {
+    display: grid;
+    gap: 1em;
+}
+
+.item-card__form-input, .item-card__form-textarea {
+    border: 1px solid var(--color-principal);
     color: var(--color-principal);
-    font-weight: bold;
+    padding: .5em;
+    font-size: 1em;
+}
+
+.item-card__form-textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+.item-card__form > .link-button {
+    max-width: 100px;
+    border: none;
 }
 
 /* Link Button */
@@ -298,10 +405,19 @@ formulario de búsqueda:*/
     background-color: var(--color-principal-eg);
 }
 
+/* Product Info */
+.product-info{
+    border: 1px solid var(--color-principal-egtr);
+    padding: .5em 0;
+}
+
+.product-info .item-card__image {
+    margin-bottom: 0;  
+}
+
 /* Space Usher */
 .space-usher {
     padding: 1em .5em;
-
 }
 
 /**************************************************************************************************/
@@ -315,7 +431,7 @@ formulario de búsqueda:*/
     }
 
     h2, h3 {
-        font-size: 2.2em;
+        font-size: 1.5em;
     }
 
     /*### LAYOUT ###*/
@@ -331,6 +447,7 @@ formulario de búsqueda:*/
     /*Main Header*/
     .main-header {
         height: 90vh;
+        padding-top: 52px;
     }
     
     /*Main Nav*/
@@ -343,7 +460,7 @@ formulario de búsqueda:*/
         height: auto;
     }
 
-    .main-nav__menu-link {
+    .main-nav__menu-link, .main-nav__menu-link--active {
         color: var(--color-principal);
         padding: .5em 1em;
     }
@@ -369,7 +486,9 @@ formulario de búsqueda:*/
     .main-nav__serch-button {
         border: none;
         display: inline;
+        cursor: pointer;
     }
+
     .main-nav__serch-input {
         border: 1px solid var(--color-principal);
         color: var(--color-principal);
@@ -383,6 +502,21 @@ formulario de búsqueda:*/
         padding: 0 .2em;
     }
 
+    /* Aside: Our Providers */
+    .our-providers {
+        padding: 1.5em 0;
+    }
+
+    .our-providers__logos {
+        padding: 1em 0;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+    }
+
+    .our-providers__logos-image {
+        max-width: 200px;
+    }
+
     /* Main Footer */
     .main-footer {
         padding: 3em;
@@ -392,8 +526,12 @@ formulario de búsqueda:*/
         font-weight: bold;
     }
 
-    .main-footer__card-social:hover {
+    .main-footer__card-social {
         font-size: 1.2em;
+    }
+
+    .main-footer__card-social:hover {
+        border: 3px solid var(--extra-color1);
     }
 
     /*### CLASES OTROS ELEMENTOS ###*/
@@ -411,6 +549,17 @@ formulario de búsqueda:*/
         margin-bottom: 2em;
     }
 
+    .card__sitemap {
+        padding: 1.5em 1em;
+        grid-column: 2/3;
+    }
+
+    .card__sitemap .card__link-sitemap1:hover,
+    .card__sitemap .card__link-sitemap2:hover {
+        color: var(--color-principal);
+    }
+
+    /* Item Card */
     .item-card__details {
         background: var(--color-principal-tr);
         border: 1px solid var(--color-principal);
@@ -434,7 +583,29 @@ formulario de búsqueda:*/
         top: 0; 
     }
 
-    .card, .item-card {
+    .item-card__image, .item-card__info { 
+        padding: 0 1em;
+    }
+
+    .item-card__form { 
+        padding: 1em;
+    }
+
+    .item-card__form-input {
+        max-width: 100%;
+    }
+
+    .item-card__form-textarea {
+        grid-column: 1/3;
+    }
+
+    /* Product Info */
+    .product-info{
         padding: 1em 0;
+    }
+
+    /* Space Usher */
+    .space-usher {
+        padding: 1.5em 0;
     }
 }

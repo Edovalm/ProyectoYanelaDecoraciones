@@ -9,11 +9,11 @@
         <meta name="description" content="Página de contacto para Yanela Decoraciones">
     </head>
     <body>
-        <header class="main-header">
+        <header class="main-header--alt">
             <div class="wrapper">
                 <article>
                     <div class="hero-info">
-                        <p class="hero-info__welcome">Realiza tu Cotización</p>
+                        <p class="link-button">Realiza tu Cotización</p>
                     </div>
                 </article>
             </div>
@@ -28,8 +28,8 @@
                 <ul class="main-nav__menu">
                     <li><a class="main-nav__menu-link" href="categoria_cortinas.html">Cortinas</a></li>
                     <li><a class="main-nav__menu-link" href="categoria_persianas.html">Persianas</a></li>
-                    <li><a class="main-nav__menu-link" href="quienes_somos.html">¿Quienes Somos?</a></li>
-                    <li><a class="main-nav__menu-link" href="contacto.html">Contacto</a></li>
+                    <li><a class="main-nav__menu-link" href="quienes_somos.html">¿Quiénes Somos?</a></li>
+                    <li><a class="main-nav__menu-link--active" href="contacto.html">Contacto</a></li>
                 </ul>
                 <spam class="icon-search main-nav__icon-toggle"></spam>
                 <div class="main-nav__serch">
@@ -44,37 +44,28 @@
         <main>
             <div class="wrapper card space-usher">
                 <h1 class="card__title">Contáctanos</h1>
-                <section>
-                    <form action="" name="contact-form">
-                        <input type="text" placeholder="Tu Nombre:" required>
-
-                        <input type="email" placeholder="Tu Correo:" required>
-
-                        <textarea name="message" cols="50" rows="15" placeholder="Tu Mensaje" required></textarea>
-
-                        <button type="submit">Enviar</button>
+                <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque tempore officia aspernatur, sunt, fuga autem eius sint facilis excepturi laboriosam commodi? Nulla error distinctio at labore laudantium nemo similique qui, et perspiciatis, optio sapiente maiores debitis odio repellat sunt quo?.</p>
+                <section class="item-card">
+                    <form class="item-card__form grid-column-2" action="" name="contact-form">
+                        <input class="item-card__form-input" type="text" placeholder="Tu Nombre:" required>
+                        <input class="item-card__form-input" type="email" placeholder="Tu Correo:" required>
+                        <textarea class="item-card__form-textarea" name="message" cols="50" rows="10" placeholder="Tu Mensaje" required></textarea>
+                        <button class="link-button" type="submit">Enviar</button>
                     </form>
                 </section>
             </div>
         </main>
 
-        <aside> 
-            <div class="wrapper">
+        <aside class="our-providers"> 
+            <div class="wrapper">  
                 <section class="card space-usher">
                     <h2 class="card__title">Nuestros Proveedores</h2>
-                    <div class="grid-wrapper grid-column-mobile-4">
-                        <article class="item-card">
-                            <img class="item-card__image" src="images/temp_image.png" alt="El Proveedor 1">
-                        </article>
-                        <article class="item-card">
-                            <img class="item-card__image" src="images/temp_image.png" alt="El Proveedor 2">
-                        </article>
-                        <article class="item-card">
-                            <img class="item-card__image" src="images/temp_image.png" alt="El Proveedor 3">
-                        </article>
-                        <article class="item-card">
-                            <img class="item-card__image" src="images/temp_image.png" alt="El Proveedor 4">
-                        </article>
+                    <p class="card__text">Ellos Confían en Nosotros</p>
+                    <div class="our-providers__logos">
+                        <img class="our-providers__logos-image" src="images/logo-proveedor1.png" alt="El Proveedor 1">
+                        <img class="our-providers__logos-image" src="images/logo-proveedor2.png" alt="El Proveedor 2">
+                        <img class="our-providers__logos-image" src="images/logo-proveedor3.png" alt="El Proveedor 3">
+                        <img class="our-providers__logos-image" src="images/logo-proveedor4.png" alt="El Proveedor 4">
                     </div>
                 </section>
             </div>
