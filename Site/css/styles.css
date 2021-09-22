@@ -327,6 +327,10 @@ búsqueda:*/
     margin-left: 1em;
 }
 
+.card__link-sitemap1 .icon-file {
+    margin-left: 0;
+}
+
 .card__text, .item-card__info {
     color: var(--color-principal-eg);
 }
