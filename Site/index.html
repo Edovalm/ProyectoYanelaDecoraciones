@@ -7,6 +7,7 @@
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <title>Inicio - Yanela Decoraciones</title>
         <meta name="description" content="Página de inicio para Yanela Decoraciones">
+        <script defer src="js/index.js"></script>
     </head>
 
     <body>
@@ -26,23 +27,23 @@
                 <div>
                     <a href="index.html"><img src="images/logo.png" alt="Ir a Inicio - Yanela Decoraciones"></a>
                 </div>
-                <spam class="icon-menu main-nav__icon-toggle"></spam>
+                <span class="icon-menu main-nav__icon-toggle" id="menu-toggle"></span>
                 <ul class="main-nav__menu">
                     <li><a class="main-nav__menu-link" href="categoria_cortinas.html">Cortinas</a></li>
                     <li><a class="main-nav__menu-link" href="categoria_persianas.html">Persianas</a></li>
                     <li><a class="main-nav__menu-link" href="quienes_somos.html">¿Quiénes Somos?</a></li>
                     <li><a class="main-nav__menu-link" href="contacto.html">Contacto</a></li>
                 </ul>
-                <spam class="icon-search main-nav__icon-toggle"></spam>
-                <div class="main-nav__serch">
-                    <form>
-                        <input class="main-nav__serch-input" type="search" placeholder="Buscar...">
-                        <button class="main-nav__serch-button" type="submit" ><span class="icon-search main-nav__serch-icon"></span></button>
+                <span class="icon-search main-nav__icon-toggle" id="search-toggle"></span>
+                <div class="main-nav__search">
+                    <form> 
+                        <input class="main-nav__search-input" type="search" placeholder="Buscar...">
+                        <button class="main-nav__search-button" type="submit" ><span class="icon-search main-nav__search-icon"></span></button>
                     </form>
                 </div>
             </div>
         </nav>
-
+        
         <main>
             <div class="wrapper card space-usher">
                 <h1 class="card__title">Productos Para Ti en Yanela Decoraciones</h1>
@@ -50,7 +51,7 @@
                 <h2 class="card__subtitle">Un Subtítulo</h2>
                 <p class="card__text">Este es un ejemplo de guia para saber que clases usar en las páginas que hay textos con subtítulos en lo referente al contenedor de calse .card.</p>
                 <div class="grid-wrapper grid-column-2">
-                    <article class="item-card">
+                    <article class="item-card animated-element">
                         <a class="item-card__link" href="categoria_cortinas.html">
                             <h2 class="item-card__title">Cortinas</h2>
                             <img class="item-card__image" src="images/img-categoria-cortinas.jpg" alt="Productos Cortinas">
@@ -61,7 +62,7 @@
                         </a>
                     </article>
     
-                    <article class="item-card">
+                    <article class="item-card animated-element">
                         <a class="item-card__link" href="categoria_persianas.html">
                             <h2 class="item-card__title">Persianas</h2>
                             <img class="item-card__image" src="images/img-categoria-persianas.jpg" alt="Productos Persianas">
@@ -79,7 +80,7 @@
             <div class="wrapper">
                 <section class="card space-usher">
                     <h2 class="card__title">Ventajas de Elegirnos</h2>
-                    <div class="grid-wrapper grid-column-3">
+                    <div class="grid-wrapper grid-column-3 animated-element">
                         <article class="item-card">
                             <h3 class="item-card__title">Innovación</h3>
                             <img class="item-card__image" src="images/innovacion.jpg" alt="La Ventaja 1">
