@@ -19,7 +19,7 @@ function animatedScroll(){
     let scrollTop = (document.documentElement.scrollTop);
     for(var i = 0; i < animatedElement.length; i++){
         let heightForAnimation = animatedElement[i].offsetTop;
-        if(heightForAnimation - (windowHeight/2)  < scrollTop) {
+        if(heightForAnimation - (windowHeight * 0.65)  < scrollTop) {
             animatedElement[i].style.opacity = 1;
             animatedElement[i].classList.add("from-above");
         }
