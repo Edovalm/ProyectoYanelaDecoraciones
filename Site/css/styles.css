@@ -106,7 +106,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .25em 0;
+    padding: .25em .5em;
 }
 
 .main-nav__elements > .icon-menu {
@@ -454,6 +454,10 @@ img {
         padding: 0;
         width: auto;
         height: auto;
+    }
+
+    .main-nav__elements {
+        padding: .25em 0;
     }
 
     .main-nav__search {

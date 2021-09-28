@@ -25,5 +25,4 @@ function animatedScroll(){
         }
     }
 }
-
 window.addEventListener("scroll", animatedScroll);
